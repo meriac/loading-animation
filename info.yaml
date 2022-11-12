@@ -1,7 +1,7 @@
 --- 
 # TinyTapeout project information
 project:
-  wokwi_id:    0        # If using wokwi, set this to your project's ID
+  wokwi_id:    348121131386929746 # If using wokwi, set this to your project's ID
 #  source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. Source files must be in ./src
 #    - counter.v
 #    - decoder.v
@@ -14,21 +14,21 @@ project:
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation: 
-  author:       ""      # Your name
-  discord:      ""      # Your discord handle
-  title:        ""      # Project title
-  description:  ""      # Short description of what your project does
-  how_it_works: ""      # Longer description of how the project works
-  how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  ""      # Describe any external hardware needed
-  language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
-  doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
-  clock_hz:     0       # Clock frequency in Hz (if required)
+  author:       "Milosch & Andre Meriac"                  # Your name
+  discord:      "FoolsDelight"                            # Your discord handle
+  title:        "Loading Animation"                       # Project title
+  description:  "Submission for tt02 - Rotating Dash"     # Short description of what your project does
+  how_it_works: "Slide switch to external clock. All DIP switches to off. DIP2 (Reset) on to run (Reset is low). By switching DIP3 (Mode) on and setting the sliding switch to Step-Button, the Step-Button can be now used to animate step by step." # Longer description of how the project works
+  how_to_test:  "Slide switch to external clock. All DIP switches to off. DIP2 (Reset) on to run (Reset is low)." # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "Default PCB"                             # Describe any external hardware needed
+  language:     "wokwi"                                   # other examples include Verilog, Amaranth, VHDL, etc
+  doc_link:     "https://github.com/meriac/loading-animation"  # URL to longer form documentation, eg the README.md in your repository
+  clock_hz:     10000   # Clock frequency in Hz (if required)
   picture:      ""      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
     - clock
     - reset
-    - none
+    - mode
     - none
     - none
     - none
@@ -41,6 +41,6 @@ documentation:
     - segment d
     - segment e
     - segment f
-    - segment g
+    - none
     - none
 
