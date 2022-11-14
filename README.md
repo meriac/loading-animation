@@ -1,34 +1,20 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
 
-# What is Tiny Tapeout?
+# Rotating Dash by Andre & Milosch Meriac #
 
-TinyTapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip!
+## Notes on submission for Chip Tape-Out (tt02) ##
+This is the submission repository for taping out [our custom chip-design](https://meriac.github.io/loading-animation)
+as part of the [TinyTapeout](https://tinytapeout.com/) (tt02) project.
 
-Go to https://tinytapeout.com for instructions!
+Our project shows an automated rotating dash - or can be switched to a
+step-by-step mode using the built-in button. You can find the "code" of
+our chip design project [here at WokWi](https://wokwi.com/projects/348121131386929746).
 
-## How to change the Wokwi project
+![Rotating Dash on 7-Segment display](https://raw.githubusercontent.com/meriac/loading-animation/main/img/loading-animation.png)
 
-Edit the [info.yaml](info.yaml) and change the wokwi_id to match your project.
+## How It Works ##
+Slide switch to external clock. All DIP switches to off. DIP2 (Reset) on to run (Reset is low). By switching DIP3 (Mode) on and setting the sliding switch to Step-Button, the Step-Button can be now used to animate step by step.
 
-## How to enable the GitHub actions to build the ASIC files
-
-Please see the instructions for:
-
-* [Enabling GitHub Actions](https://tinytapeout.com/faq/#when-i-commit-my-change-the-gds-action-isnt-running)
-* [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
-
-## How does it work?
-
-When you edit the info.yaml to choose a different ID, the [GitHub Action](.github/workflows/gds.yaml) will fetch the digital netlist of your design from Wokwi.
-
-After that, the action uses the open source ASIC tool called [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/) to build the files needed to fabricate an ASIC.
-
-## Resources
-
-* [FAQ](https://tinytapeout.com/faq/)
-* [Digital design lessons](https://tinytapeout.com/digital_design/)
-* [Join the community](https://discord.gg/rPK2nSjxy8)
-
-## What next?
-
-* Share your GDS on Twitter, tag it [#tinytapeout](https://twitter.com/hashtag/tinytapeout?src=hashtag_click) and [link me](https://twitter.com/matthewvenn)!
+## How To Test ##
+Slide switch to external clock. All DIP switches to off. DIP2 (Reset) on
+to run (Reset is low-active).
